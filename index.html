@@ -10,10 +10,11 @@
 <style>
 :root{
   --cream:#f7f2ea;
+  --paper:#fffaf3;
   --ink:#111827;
   --muted:#6b7280;
-  --gold:#c8943f;
-  --orange:#ff5a00;
+  --line:#d8c7ad;
+  --gold:#b8893b;
 }
 
 *{box-sizing:border-box}
@@ -21,20 +22,173 @@
 body{
   margin:0;
   min-height:100vh;
-  background:radial-gradient(circle at top,#fffaf2 0%,var(--cream) 55%,#efe7da 100%);
+  background:radial-gradient(circle at top,#fffaf5 0%,var(--cream) 58%,#eee4d6 100%);
   color:var(--ink);
   font-family:Inter,system-ui,sans-serif;
+}
+
+main{
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:24px;
+  padding:28px 22px;
 }
 
 .card{
   width:100%;
-  max-width:430px;
+  max-width:460px;
   text-align:center;
-  padding:34px 22px 30px;
+}
+
+.photo{
+  width:min(74vw,300px);
+  height:min(74vw,300px);
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 24px 70px rgba(17,24,39,.16);
+  border:1px solid rgba(255,255,255,.9);
+}
+
+h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  font-weight:600;
+  line-height:.95;
+  margin:34px 0 12px;
+  letter-spacing:-.035em;
+}
+
+.role{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  line-height:1.75;
+  color:var(--muted);
+  max-width:360px;
+  margin:0 auto;
+}
+
+.location{
+  margin-top:12px;
+  font-size:14px;
+  color:var(--ink);
+}
+
+.divider{
+  width:36px;
+  height:1px;
+  background:var(--gold);
+  margin:30px auto;
+}
+
+.bio{
+  max-width:390px;
+  margin:0 auto;
+  font-size:15px;
+  line-height:1.75;
+  color:#2f3540;
+}
+
+.interests{
+  margin-top:26px;
+}
+
+.interests-title{
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+.interests-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
+
+.interests-list span{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:13px;
+  color:#374151;
+  background:rgba(255,255,255,.35);
+}
+
+.email{
+  margin-top:30px;
+  font-size:15px;
+}
+
+.email a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:3px;
+}
+
+.quote{
+  margin-top:42px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:40px;
+  font-style:italic;
+  color:var(--ink);
+}
+
+@media(max-width:390px){
+  h1{font-size:48px}
+  .quote{font-size:34px}
+  .bio{font-size:14px}
+}
+</style>
+</head>
+
+<body>
+<main>
+  <section class="card">
+
+    <img src="headshot.png" alt="Lee Jia Hui" class="photo">
+
+    <h1>Lee Jia Hui</h1>
+
+    <div class="role">
+      Strategic Communications · AI Policy · Public Sector Technology
+    </div>
+
+    <div class="location">Singapore</div>
+
+    <div class="divider"></div>
+
+    <div class="bio">
+      I am interested in how nations, institutions, and companies build trust in AI.
+      <br><br>
+      My experience spans national communications, information operations, sovereign AI infrastructure, and public-sector technology adoption across Asia-Pacific.
+    </div>
+
+    <div class="interests">
+      <div class="interests-title">Areas of Interest</div>
+      <div class="interests-list">
+        <span>Sovereign AI</span>
+        <span>Open-weight Models</span>
+        <span>AI Policy</span>
+        <span>Public Trust in AI</span>
+        <span>Human–AI Collaboration</span>
+      </div>
+    </div>
+
+    <div class="email">
+      <a href="mailto:leejiahui7@gmail.com">leejiahui7@gmail.com</a>
+    </div>
+
+    <div class="quote">« Pourquoi pas ? »</div>
+
+  </section>
+</main>
+</body>
+</html>  padding:34px 22px 30px;
 }
 
 .photo{
