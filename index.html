@@ -8,125 +8,87 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --cream:#f7f2ea;
-  --paper:#fffaf3;
-  --ink:#111827;
-  --muted:#6b7280;
-  --line:#d8c7ad;
-  --gold:#b8893b;
-}
-
-*{box-sizing:border-box}
-
 body{
   margin:0;
   min-height:100vh;
-  background:radial-gradient(circle at top,#fffaf5 0%,var(--cream) 58%,#eee4d6 100%);
-  color:var(--ink);
+  background:#f7f2ea;
+  color:#111827;
   font-family:Inter,system-ui,sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:24px;
 }
 
 main{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:28px 22px;
-}
-
-.card{
-  width:100%;
-  max-width:460px;
+  max-width:430px;
   text-align:center;
 }
 
-.photo{
+img{
   width:min(74vw,300px);
   height:min(74vw,300px);
-  border-radius:50%;
   object-fit:cover;
-  box-shadow:0 24px 70px rgba(17,24,39,.16);
-  border:1px solid rgba(255,255,255,.9);
+  border-radius:50%;
+  box-shadow:0 24px 70px rgba(0,0,0,.16);
 }
 
 h1{
   font-family:"Cormorant Garamond",serif;
   font-size:56px;
-  font-weight:600;
-  line-height:.95;
-  margin:34px 0 12px;
-  letter-spacing:-.035em;
+  margin:32px 0 12px;
 }
 
 .role{
   font-size:12px;
   letter-spacing:.12em;
   text-transform:uppercase;
-  line-height:1.75;
-  color:var(--muted);
-  max-width:360px;
-  margin:0 auto;
+  line-height:1.7;
+  color:#6b7280;
 }
 
 .location{
   margin-top:12px;
   font-size:14px;
-  color:var(--ink);
-}
-
-.divider{
-  width:36px;
-  height:1px;
-  background:var(--gold);
-  margin:30px auto;
 }
 
 .bio{
-  max-width:390px;
-  margin:0 auto;
+  margin-top:32px;
   font-size:15px;
   line-height:1.75;
-  color:#2f3540;
 }
 
-.interests{
-  margin-top:26px;
-}
-
-.interests-title{
+.title{
+  margin-top:28px;
   font-size:11px;
   letter-spacing:.16em;
   text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:14px;
+  color:#b8893b;
 }
 
-.interests-list{
+.tags{
+  margin-top:14px;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:8px;
 }
 
-.interests-list span{
-  border:1px solid var(--line);
+.tags span{
+  border:1px solid #d8c7ad;
   border-radius:999px;
   padding:7px 12px;
   font-size:13px;
-  color:#374151;
-  background:rgba(255,255,255,.35);
 }
 
 .email{
   margin-top:30px;
-  font-size:15px;
 }
 
 .email a{
-  color:var(--ink);
+  color:#111827;
   text-decoration:none;
-  border-bottom:1px solid var(--gold);
+  border-bottom:1px solid #b8893b;
   padding-bottom:3px;
 }
 
@@ -135,150 +97,48 @@ h1{
   font-family:"Cormorant Garamond",serif;
   font-size:40px;
   font-style:italic;
-  color:var(--ink);
 }
 
 @media(max-width:390px){
   h1{font-size:48px}
   .quote{font-size:34px}
-  .bio{font-size:14px}
 }
 </style>
 </head>
 
 <body>
 <main>
-  <section class="card">
+  <img src="./headshot.png" alt="Lee Jia Hui">
 
-    <img src="headshot.png" alt="Lee Jia Hui" class="photo">
+  <h1>Lee Jia Hui</h1>
 
-    <h1>Lee Jia Hui</h1>
+  <div class="role">
+    Strategic Communications · AI Policy · Public Sector Technology
+  </div>
 
-    <div class="role">
-      Strategic Communications · AI Policy · Public Sector Technology
-    </div>
+  <div class="location">Singapore</div>
 
-    <div class="location">Singapore</div>
+  <div class="bio">
+    I am interested in how nations, institutions, and companies build trust in AI.
+    <br><br>
+    My experience spans national communications, information operations, sovereign AI infrastructure, and public-sector technology adoption across Asia-Pacific.
+  </div>
 
-    <div class="divider"></div>
+  <div class="title">Areas of Interest</div>
 
-    <div class="bio">
-      I am interested in how nations, institutions, and companies build trust in AI.
-      <br><br>
-      My experience spans national communications, information operations, sovereign AI infrastructure, and public-sector technology adoption across Asia-Pacific.
-    </div>
+  <div class="tags">
+    <span>Sovereign AI</span>
+    <span>Open-weight Models</span>
+    <span>AI Policy</span>
+    <span>Public Trust in AI</span>
+    <span>Human–AI Collaboration</span>
+  </div>
 
-    <div class="interests">
-      <div class="interests-title">Areas of Interest</div>
-      <div class="interests-list">
-        <span>Sovereign AI</span>
-        <span>Open-weight Models</span>
-        <span>AI Policy</span>
-        <span>Public Trust in AI</span>
-        <span>Human–AI Collaboration</span>
-      </div>
-    </div>
+  <div class="email">
+    <a href="mailto:leejiahui7@gmail.com">leejiahui7@gmail.com</a>
+  </div>
 
-    <div class="email">
-      <a href="mailto:leejiahui7@gmail.com">leejiahui7@gmail.com</a>
-    </div>
-
-    <div class="quote">« Pourquoi pas ? »</div>
-
-  </section>
+  <div class="quote">« Pourquoi pas ? »</div>
 </main>
-</body>
-</html>  padding:34px 22px 30px;
-}
-
-.photo{
-  width:min(78vw,310px);
-  height:min(78vw,310px);
-  object-fit:cover;
-  border-radius:999px;
-  box-shadow:0 24px 70px rgba(17,24,39,.16);
-  border:1px solid rgba(255,255,255,.8);
-}
-
-h1{
-  font-family:"Cormorant Garamond",serif;
-  font-size:54px;
-  font-weight:600;
-  line-height:1;
-  margin:34px 0 12px;
-  letter-spacing:-.03em;
-}
-
-.role{
-  font-size:12px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  line-height:1.7;
-  color:var(--muted);
-  max-width:330px;
-  margin:0 auto;
-}
-
-.location{
-  margin-top:12px;
-  font-size:14px;
-  color:var(--ink);
-}
-
-.email{
-  margin-top:28px;
-  font-size:16px;
-}
-
-.email a{
-  color:var(--ink);
-  text-decoration:none;
-  border-bottom:1px solid var(--gold);
-  padding-bottom:3px;
-}
-
-.quote{
-  margin-top:44px;
-  font-family:"Cormorant Garamond",serif;
-  font-size:38px;
-  font-style:italic;
-  color:var(--ink);
-}
-
-.mark{
-  width:34px;
-  height:2px;
-  background:var(--orange);
-  margin:26px auto 0;
-  border-radius:99px;
-}
-
-@media(max-width:390px){
-  h1{font-size:46px}
-  .quote{font-size:32px}
-  .card{padding-top:20px}
-}
-</style>
-</head>
-
-<body>
-  <main class="card">
-    <img src="profile-cat.png" alt="Lee Jia Hui with Mistral AI cat" class="photo">
-
-    <h1>Lee Jia Hui</h1>
-
-    <div class="role">
-      Strategic Communications · AI Policy · Public Sector Technology
-    </div>
-
-    <div class="location">Singapore</div>
-
-    <div class="email">
-      <a href="mailto:leejiahui7@gmail.com">leejiahui7@gmail.com</a>
-    </div>
-
-    <div class="quote">« Pourquoi pas ? »</div>
-    <div class="mark"></div>
-  </main>
 </body>
 </html>
